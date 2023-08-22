@@ -1,0 +1,45 @@
+<!-- view/index.html -->
+
+<h1>
+    {{ text }}
+</h1>
+<h2>{{title}}</h2>
+ <p>循环food：</p>
+ <ul>
+ {% for key,value in food %}
+  <li>{{key}} - {{value}}</li>
+ {% endfor %}
+ </ul>
+ 
+<h2>{{title}}</h2>
+ <p>循环food2：</p>
+ <ul>
+ {% for d in food2 %}
+  <li>{{d.id}} - {{d.name}} - {{d.home}}</li>
+ {% endfor %}
+ </ul>
+
+<h2>{{title}}</h2>
+ <p>循环food3：</p>
+ <ul>
+ {% for d in ljs %}
+  <li>{{d.id}} - {{d.name}} - {{d.home}}</li>
+ {% endfor %}
+ </ul>
+
+<h1>所有人员</h1>
+
+    <table>
+          <tr>
+            <th>ID</th>
+            <th>姓名</th>
+            <th>房号</th>
+          </tr>
+        {% for test in zcw %}
+          <tr>
+            <td>{{ test.id }}</td>
+            <td>{{ test.name }}</td>
+            <td>{{ test.home }}</td>
+          </tr>
+        {% endfor %}
+    </table>

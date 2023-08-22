@@ -1,0 +1,44 @@
+{
+  "apps": [
+    /*// 应用1
+    {
+      "name": "server1",// 应用名称
+      "script": "./www/server.js",// 应用路径,相对于 node 根目录的相对路径
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "error_file": "logs/node-server1.stderr.log",
+      "out_file": "logs/node-server1.stdout.log",
+      "pid_file": "pids/node-server1.pid",
+      "instances": 1,// 启动实例数
+      "min_uptime": "120s",
+      "max_restarts": 10,
+      "max_memory_restart": "100M",
+      "cron_restart": "1 0 * * *",
+      "watch": false,// 热加载
+      "merge_logs": true,
+      "exec_interpreter": "node",
+      "exec_mode": "fork",// cluster 或 fork, 默认 fork
+      "autorestart": true,
+      "vizion": false
+    },*/
+    //应用2
+    {
+      "name": "server2",// 应用名称
+      "script": "./www/my.js",// 应用路径,相对于 node 根目录的相对路径
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "error_file": "logs/node-server2.stderr.log",
+      "out_file": "logs/node-server2.stdout.log",
+      "pid_file": "pids/node-server2.pid",
+      "instances": 2,// 启动实例数
+      "min_uptime": "120s",
+      "max_restarts": 10,
+      "max_memory_restart": "100M",
+      "cron_restart": "1 0 * * *",
+      "watch": false,// 热加载
+      "merge_logs": true,
+      "exec_interpreter": "node",
+      "exec_mode": "cluster",// cluster 或 fork, 默认 fork
+      "autorestart": true,
+      "vizion": false
+    }
+  ]
+}
